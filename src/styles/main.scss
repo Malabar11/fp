@@ -1,0 +1,35 @@
+@font-face {
+   font-family: "Captureit";
+   src: url(../../fonts/Captureit.ttf);
+}
+@font-face {
+   font-family: "LifeHack";
+   src: url(../../fonts/Lifehack-Basic.otf);
+}
+@font-face {
+   font-family: "RobotoBlack";
+   src: url(../../fonts/RobotoBlack.ttf);
+}
+@font-face {
+   font-family: "RobotoBold";
+   src: url(../../fonts/RobotoBold.ttf);
+}
+@font-face {
+   font-family: "RobotoLight";
+   src: url(../../fonts/RobotoLight.ttf);
+}
+@font-face {
+   font-family: "RobotoRegular";
+   src: url(../../fonts/RobotoRegular.ttf);
+}
+@font-face {
+   font-family: "RobotoThin";
+   src: url(../../fonts/RobotoThin.ttf);
+}
+*{
+   box-sizing: border-box;
+}
+body {
+   margin: 0;
+   font-family: "Captureit";
+}
