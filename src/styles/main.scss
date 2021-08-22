@@ -230,3 +230,126 @@ header {
 
 
 }
+.stock {
+   .title {
+      color: rgb(51, 23, 3);
+      margin: 70px auto 45px auto;
+   }
+   .category-container {
+      display: flex;
+      justify-content: center;
+      margin: 30px auto;
+      .category {
+         font-size: 20px;
+         font-family: $main-font;
+         color: rgb(51, 23, 3);
+         text-align: center; 
+         border: 1px solid transparent;
+         margin: 0 10px;
+         padding: 10px 15px;
+         border-radius: 10px;
+         &:hover {
+            cursor: pointer;
+            border-color:rgb(51, 23, 3);
+         }
+
+      }
+      .category.active {
+         font-family: "RobotoBold",sans-serif;
+         border-color:rgb(51, 23, 3);
+      }
+   }
+   .products {
+      margin: 0 auto;
+      .product {
+         display: flex;
+         justify-content: space-between;
+         .product-image {
+            width: 580px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+               max-width: 100%;
+               max-height: 100%;
+            }
+         }
+         .product-content {
+            width: 500px;
+            .product-content-title {
+               font-size: 25px;
+               font-family: "RobotoBold";
+               color: rgb(51, 23, 3);
+               text-transform: uppercase;  
+               margin: 100px 0 35px 0;
+            }
+            .product-content-descr {
+               font-size: 16px;
+               font-family: $main-font;
+               color: rgb(51, 23, 3);
+               line-height: 25px; 
+               margin-bottom: 50px;
+            }
+            .product-content-properties {
+               display: flex;
+               .product-content-propertie {
+                  span {
+                     font-size: 20px;
+                     font-family: $main-font;
+                     color: rgb(51, 23, 3);
+                  }
+                  img {
+                     margin-right: 10px;
+                  }
+                  &:first-child {
+                     margin-right: 80px;
+                  }
+
+               }
+            }
+         }
+      }
+   }
+   .products-nav {
+      display: flex;
+      margin-bottom: 95px;
+      margin-top: 10px;
+      .product-nav {
+         width: 75px;
+         height: 75px;
+         display: flex;
+         align-items: center;
+         margin-right: 15px;
+         opacity: 0.3;
+         &:hover {
+            opacity: 1;
+            cursor: pointer;
+         }
+         img {
+            max-height: 100%;
+            max-width: 100%;
+         }
+      }
+      .product-nav.slick-current {
+         opacity: 1;
+      }
+   }
+}
+.slick-slide img {
+   display: inline;
+}
+.slick-prev:before{
+   content: url(../img/prev.png);
+} 
+.slick-next:before {
+   content: url(../img/next.png);
+}
+.slick-next {
+   left: 600px;
+}
+#fries-conteiner,
+#sauces-conteiner,
+#drinks-conteiner {
+   display: none;
+}
