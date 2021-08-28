@@ -78,5 +78,41 @@ $(document).ready(() => {
       focusOnSelect: true
     });
 
+    $('.reviews').slick({
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 2
+    });
+
+    $('.open-modal').click(() => {
+      $('#reservation-container').css('display', 'flex');
+    });
+    $('#reservation-cancel-close, #reservation-container').click((e) => {
+      if (e.target.id === 'reservation-container' || e.target.id === 'reservation-cancel-close')
+      $('#reservation-container').hide();
+    })
+    $('#reserve-btn').click(() => {
+      let name = $('#name');
+      let count = $('#count');
+      let phone = $('#phone');
+      let time = $('#time');
+      if (name.val() && count.val() && phone.val() && time.val()) {
+        $.ajax({
+          type: 'POST',
+          url: 'mail.php',
+          data: 'name=' + name.val() + '&count=' + count.val + '&phone' + phone.val() + '&time' + time.val(),
+          success: () => {
+            $('#reservation-sent').show();
+            $('#reservation-content').hide();
+          }, 
+          error: () => {
+            $('#reservation-container').hide();
+            alert('Ошибка бронирования. Свяжитесь, пожалуйста, по телефону')
+          }
+        });
+      } else {
+        $('#reserve-error').show();
+      }
+    })
 
 });
