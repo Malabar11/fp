@@ -81,7 +81,18 @@ $(document).ready(() => {
     $('.reviews').slick({
       infinite: true,
       slidesToShow: 2,
-      slidesToScroll: 2
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 579,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: false
+          }
+        },
+      ]
     });
 
     $('.open-modal').click(() => {
@@ -113,6 +124,15 @@ $(document).ready(() => {
       } else {
         $('#reserve-error').show();
       }
+    })
+
+    $('#burger').click(() => {
+      $('.header').toggleClass('menu-open');
+      $('header .wrapper').toggleClass('menu-open');
+    })
+    $('.header .header-nav .nav-list .nav-link').click(() =>{
+      $('.header').removeClass('menu-open');
+      $('header .wrapper').removeClass('menu-open');
     })
 
 });

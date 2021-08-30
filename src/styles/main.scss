@@ -371,6 +371,7 @@ header {
    .reviews {
       display: flex;
       justify-content: space-between;
+      
       .review {
          display: flex;
          align-items: flex-start;
@@ -615,4 +616,10 @@ footer {
       box-shadow: 0px 0px 13.5px 1.5px rgba(204, 142, 6, 1);
       cursor: pointer;
    }  
+}
+#burger {
+   display: none;
+   font-size: 32px;
+   color: white;
+   line-height: 30px;
 }
